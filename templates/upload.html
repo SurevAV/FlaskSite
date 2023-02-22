@@ -1,0 +1,16 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<a href="/" class="link-return">Назад</a>
+<a href="/editor" class="link-return">Редактор</a>
+<a href="/users" class="link-return">Пользователи</a>
+<a href="/visitors" class="link-return">Посетители</a>
+<hr class="line-view">
+
+<p>{{uploading}}</p>
+<form method="POST" action="" enctype="multipart/form-data">
+    <p><input type="file" name="file"></p>
+    <p><input class="buttonpage" type="submit" value="Загрузить"></p>
+</form>
+
+{% endblock %}

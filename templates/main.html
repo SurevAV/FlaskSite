@@ -1,0 +1,29 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+
+
+{% for item in list_Articles %}
+<div class="container-item">
+    <img src={{item.Image}} class="image" width="200" height="100">
+    <div class="container-link">
+        <a href={{for_link}}{{item.Id}} class="link">{{item.Title}}</a>
+    </div>
+</div>
+<hr class="line">
+{% endfor %}
+
+
+<a class="page-text">Страница: </a>
+{% for item in list_pages %}
+
+{% if item == view_page %}
+<a href={{for_link_page}}{{item}} class="link-page-view">{{item}}</a>
+{% else %}
+<a href={{for_link_page}}{{item}} class="link-page">{{item}}</a>
+{% endif %}
+{% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+
+<div class="tab-view"></div>
+<div class="title">
+    <a class="text-view">Введите пароль</a>
+</div>
+<form method="POST" action="" enctype="multipart/form-data">
+    <input name="key" class="list-to" maxlength="5000" placeholder="Введите пароль">
+    <div class="tab-view"></div>
+    <input type="submit" name="click" class="buttonpage" value="Отправить пароль">
+</form>
+
+{% if item == 1 %}
+<div class="title">
+    <a class="text-view">Пароль принят</a>
+</div>
+<hr class="line-view">
+<a href="/" class="link-return">Назад</a>
+<a href="/editor" class="link-return">Редактор</a>
+<a href="/users" class="link-return">Пользователи</a>
+<a href="/upload" class="link-return">Загрузка файла</a>
+<a href="/visitors" class="link-return">Посетители</a>
+<hr class="line-view">
+{% endif %}
+
+{% endblock %}

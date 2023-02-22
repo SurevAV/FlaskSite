@@ -1,0 +1,53 @@
+/*
+
+.row_title {
+    outline: none !important;
+    height: 25px;
+    width: 350px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #c7c9b1;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 0px;
+}
+
+.row_article {
+    outline: none !important;
+    height: 400px;
+    width: 350px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #c7c9b1;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 0px;
+}
+
+*/
+
+
+.row-editor {
+    height: 1000px;
+    width: 100%;
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    padding: 0px 0px 0px 0px;
+    background-color: RGB(255, 255, 255);
+    font: normal normal 14px/1.5 normal;
+    font-family: Arial;
+}
+
+.rows {
+    text-decoration: none;
+    font: normal normal 15px/2 normal;
+    font-family: Arial;
+    color: RGB(10, 10, 10);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+

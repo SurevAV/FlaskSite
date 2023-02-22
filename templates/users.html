@@ -1,0 +1,108 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<script type="text/javascript" src="/static/scripts/script.js"></script>
+
+<a href="/" class="link-return">Назад</a>
+<a href="/editor" class="link-return">Редактор</a>
+<a href="/upload" class="link-return">Загрузка файла</a>
+<a href="/visitors" class="link-return">Посетители</a>
+<hr class="line-view">
+
+<form method="GET">
+
+    <a class="users-text">От</a>
+    <input type="date" class="container-date" name="from" value="2020-10-01">
+    <a class="users-text">До</a>
+    <input type="date" class="container-date" name="to" value="2025-10-01">
+    <div class="tab-view"></div>
+    <input name="ip" class="users" maxlength="100" placeholder="IP">
+    <div class="tab-view"></div>
+    <input name="id_cookie" class="users" maxlength="100" placeholder="Номер печеньки">
+    <div class="tab-view"></div>
+    <input name="number_record" class="users" maxlength="100" placeholder="Номер статьи">
+    <div class="tab-view"></div>
+    <input name="number_comments" class="users" maxlength="100" placeholder="Номер комментария">
+    <div class="tab-view"></div>
+    <input name="contain" class="users" maxlength="100" placeholder="Содержит слово">
+    <div class="tab-view"></div>
+    <input type="submit" name="click" class="buttonpage" value="Найти комментарии">
+    <div class="tab-view"></div>
+    <hr class="line-view">
+    <div class="tab-view"></div>
+
+
+    <div class="container-view">
+        <div class="title">
+            <a class="text-view">Комментарии</a>
+        </div>
+        {% for Replys in list_Comments %}
+        <div class="container-reply">
+            <hr class="line-view">
+            <a class="text-reply-items">Номер: </a>
+            <a id={{Replys.Id}} class="link-to" onClick="reply_click(this.id)">{{Replys.Id}}</a><br>
+            <a class="text-reply-items">Номер статьи: {{Replys.IdArticle}}</a><br>
+            <a class="text-reply-items">Номер печеньки: {{Replys.IdCookie}}</a><br>
+            <a class="text-reply-items">IP: {{Replys.Ip}}</a><br>
+            <a class="text-reply-items">Дата: {{Replys.DateString}}</a><br>
+            <a class="text-reply-items">Кому:</a>
+            {% for to in Replys.ListTo %}
+                <a href=#{{to}} class="link-to">...{{to[31:]}}</a>
+            {% endfor %}
+            <div class="tab-view"></div>
+            <a class="text-reply">{{Replys.Reply}}</a>
+            <div class="tab-view"></div>
+            <a class="text-reply-items">Ответы:</a>
+            {% for reply in Replys.Replys %}
+                <a href=#{{reply}} class="link-to">...{{reply[31:]}}</a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="tab-view"></div>
+
+    <input id="to" name="list_to" class="list-to" maxlength="5000" placeholder="Введите список номеров через запятую">
+    <div class="tab-view"></div>
+    <input type="submit" name="click" class="buttonpage" value="Удалить комментарии">
+</form>
+
+
+<hr class="line-view">
+<a class="link-hide" onClick="hide_block()">Меню блокировки</a>
+<div class="tab-view"></div>
+
+<div id="block-menu" style="display: {{ block_menu }};">
+    <form method="GET">
+        <a class="users-text">Срок блокировки до</a>
+        <input type="date" class="container-date" name="block_to" value="2025-10-01">
+
+        <div class="tab-view"></div>
+        <input name="block_ip" class="list-to" maxlength="5000" placeholder="Введите ип">
+        <div class="tab-view"></div>
+        <input name="block_text" class="list-to" maxlength="5000" placeholder="Введите причину">
+        <div class="tab-view"></div>
+
+        <input type="submit" name="click" class="buttonpage" value="Заблокировать">
+        <input type="submit" name="click" class="buttonpage" value="Разблокировать">
+        <input type="submit" name="click" class="buttonpage" value="Список">
+    </form>
+
+    <div class="container-view">
+        {% for item in list_block_ip %}
+        <div class="container-reply">
+
+            <a class="text-reply-items">IP: {{item.Ip}}</a><br>
+            <a class="text-reply-items">От: {{item.DateFrom}}</a><br>
+            <a class="text-reply-items">До: {{item.DateTo}}</a><br>
+
+            <div class="tab-view"></div>
+            <a class="text-reply">{{item.Reply}}</a>
+            <hr class="line-view">
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

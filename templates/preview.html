@@ -1,0 +1,17 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<a href={{link_return}} class="link-return">Назад</a>
+<div class="tab-view"></div>
+
+<div class="container-view">
+    <div class="title">{{items[0]|safe}}</div>
+    <div class="text-view">{{items[1]|safe}}</div>
+</div>
+
+<div class="tab-view"></div>
+
+
+<a href={{link_return}} class="link-return">Назад</a>
+
+{% endblock %}

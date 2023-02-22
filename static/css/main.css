@@ -1,0 +1,120 @@
+
+.container-link {
+    padding: 20px 0px 0px 20px;
+    min-width: 150px;
+}
+
+
+
+.container-item {
+    display: flex;
+}
+
+.image {
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    border-width: 1px;
+    min-width: 200px;
+}
+
+.link {
+    text-decoration: none;
+    font: normal normal 17px/1 normal;
+    font-family: Arial;
+    color: RGB(100, 100, 100);
+    animation-name: link-color-change;
+    animation-duration: 1s;
+}
+    .link:hover {
+        text-decoration: none;
+        font: normal normal 17px/1 normal;
+        font-family: Arial;
+        color: RGB(10, 10, 10);
+    }
+@keyframes link-color-change {
+    0% {
+        color: RGB(240, 240, 240);
+    }
+    25% {
+        color: RGB(240, 240, 240);
+    }
+    50% {
+        color: RGB(200, 200, 200);
+    }
+    75% {
+        color: RGB(150, 150, 150);
+    }
+    100% {
+        color: RGB(100, 100, 100);
+    }
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    color: RGB(200, 200, 200);
+    background-color: RGB(200, 200, 200);
+    border-width: 0;
+}
+
+
+
+.page-text {
+    text-decoration: none;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+}
+
+
+.link-page {
+    text-decoration: none;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+    text-align: center;
+    padding: 0px 10px 2px 10px;
+}
+    .link-page:hover {
+        text-decoration: none;
+        font: normal normal 15px/1 normal;
+        font-family: Arial;
+        color: RGB(0, 0, 0);
+        padding: 0px 10px 2px 10px;
+    }
+
+.link-page-view {
+    text-decoration: none;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+    border: 1px solid RGB(40, 50, 75);
+    border-radius: 2px;
+    border-width: 1px;
+    text-align: center;
+    padding: 0px 10px 2px 10px;
+    /*    animation-name: color-border-change;
+    animation-duration: 2s;*/
+}
+
+/*@keyframes color-border-change {
+    0% {
+        border: 1px solid RGB(70, 100, 120);
+    }
+
+    25% {
+        border: 1px solid RGB(70, 100, 120);
+    }
+
+    50% {
+        border: 1px solid RGB(70, 100, 120);
+    }
+
+    75% {
+        border: 1px solid RGB(40, 50, 75);
+    }
+
+    100% {
+        border: 1px solid RGB(40, 50, 75);
+    }
+}*/

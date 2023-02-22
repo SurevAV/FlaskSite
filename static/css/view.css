@@ -1,0 +1,183 @@
+
+.link-return {
+    text-decoration: none;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+}
+    .link-return:hover {
+        text-decoration: none;
+        font: normal normal 15px/1 normal;
+        font-family: Arial;
+        color: black;
+    }
+
+
+.container-view {
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    border-width: 1px;
+    width: 100%;
+    background-color: RGB(255, 255, 255);
+}
+
+.title {
+    text-decoration: none;
+    font: normal normal 20px/1.5 normal;
+    font-family: Arial;
+    color: RGB(10, 10, 10);
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    animation-name: color-text-change;
+    animation-duration: 1s;
+}
+
+.text-view {
+    text-decoration: none;
+    font: normal normal 15px/1.5 normal;
+    font-family: Arial;
+    padding: 20px 20px 20px 20px;
+    color: RGB(10, 10, 10);
+    text-align: left;
+    animation-name: color-text-change;
+    animation-duration: 2s;
+}
+
+
+
+.container-reply {
+    padding: 0px 20px 0px 20px;
+}
+
+.line-view {
+    height: 1px;
+    color: black;
+    background-color: RGB(240, 240, 240);
+    border-width: 0;
+}
+
+.text-reply-items {
+    font: normal normal 10px/1 normal;
+    font-family: Arial;
+    color: RGB(0, 0, 0);
+    text-align: left;
+    animation-name: color-text-change;
+    animation-duration: 4s;
+}
+
+.text-reply {
+    font: normal normal 14px/1.5 normal;
+    font-family: Arial;
+    color: RGB(0, 0, 0);
+    text-align: left;
+    animation-name: color-text-change;
+    animation-duration: 4s;
+}
+
+@keyframes color-text-change {
+    0% {
+        color: RGB(255, 255, 255);
+    }
+
+    25% {
+        color: RGB(255, 255, 255);
+    }
+
+    50% {
+        color: RGB(200, 200, 200);
+    }
+
+    75% {
+        color: RGB(50, 50, 50);
+    }
+
+    100% {
+        color: RGB(10, 10, 10);
+    }
+}
+
+.row {
+    height: 200px;
+    width: 100%;
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    padding: 0px 0px 0px 0px;
+    background-color: RGB(255, 255, 255);
+    font: normal normal 14px/1.5 normal;
+    font-family: Arial;
+}
+
+
+.buttonpage {
+    background-color: RGB(240, 240, 240);
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    color: RGB(150, 150, 150);
+    padding: 0px 0px;
+    text-decoration: none;
+    cursor: pointer;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+}
+    .buttonpage:hover {
+        background-color: RGB(240, 240, 240);
+        border: 1px solid RGB(240, 240, 240);
+        border-radius: 2px;
+        color: RGB(0, 0, 0);
+        padding: 0px 0px;
+        text-decoration: none;
+        cursor: pointer;
+        font: normal normal 15px/1 normal;
+        font-family: Arial;
+    }
+
+input::placeholder {
+    font: normal normal 14px/1.5 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 140);
+    padding: 0px 0px 0px 20px;
+}
+
+textarea::placeholder {
+    font: normal normal 14px/1.5 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 140);
+    padding: 15px 0px 0px 20px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.list-to {
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    padding: 0px 0px 0px 0px;
+    font-size: 14px;
+    background-color: RGB(255, 255, 255);
+}
+
+.link-to {
+    text-decoration: none;
+    cursor: pointer;
+    font: normal normal 10px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+}
+    .link-to:hover {
+        text-decoration: none;
+        font: normal normal 10px/1 normal;
+        font-family: Arial;
+        color: black;
+    }
+
+.tab-view {
+    margin-top: 10px;
+}
+
+.tab-view-2 {
+    margin-top: 10px;
+}

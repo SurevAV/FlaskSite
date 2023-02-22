@@ -1,0 +1,13 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+
+<div class="tab-view"></div>
+
+<div class="container-view">
+    <div class="title">Ваш IP: {{item[0]}} заблокирован до {{item[2]}}.</div>
+    <div class="text-view">По причиние: {{item[3]}}</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+
+
+.users-text {
+    text-decoration: none;
+    font: normal normal 15px/1.5 normal;
+    font-family: Arial;
+    padding: 20px 20px 20px 20px;
+    color: RGB(10, 10, 10);
+    text-align: left;
+}
+
+.container-date {
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    border-width: 1px;
+    background-color: RGB(255, 255, 255);
+}
+
+.users {
+    width: 415px;
+    height: 40px;
+    border: 1px solid RGB(240, 240, 240);
+    border-radius: 2px;
+    padding: 0px 0px 0px 0px;
+    font-size: 14px;
+    background-color: RGB(255, 255, 255);
+}
+
+.link-hide {
+    text-decoration: none;
+    cursor: pointer;
+    font: normal normal 15px/1 normal;
+    font-family: Arial;
+    color: RGB(150, 150, 150);
+}
+
+    .link-hide:hover {
+        text-decoration: none;
+        font: normal normal 15px/1 normal;
+        font-family: Arial;
+        color: black;
+    }

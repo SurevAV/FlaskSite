@@ -1,0 +1,39 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<a href="/" class="link-return">Назад</a>
+<a href="/users" class="link-return">Пользователи</a>
+<a href="/upload" class="link-return">Загрузка файла</a>
+<a href="/visitors" class="link-return">Посетители</a>
+<hr class="line-view">
+
+<form method="POST" action="" enctype="multipart/form-data">
+    <input type="submit" name="click" class="buttonpage" value="Очистить SQL">
+    <input type="submit" name="click" class="buttonpage" value="Добавить запись">
+    <input type="submit" name="click" class="buttonpage" value="Найти запись">
+    <input type="submit" name="click" class="buttonpage" value="Обновить запись">
+    <input type="submit" name="click" class="buttonpage" value="Удалить запись">
+    <input type="submit" name="click" class="buttonpage" value="Список всех записей">
+    <input type="submit" name="click" class="buttonpage" value="Предпросмотр">
+
+
+    <div>
+        <div class="rows">Заголовок</div>
+        <textarea name="title" class="list-to">{{title}}</textarea>
+    </div>
+
+
+    <div>
+        <div class="rows">Картинка</div>
+        <textarea name="image" class="list-to">{{image}}</textarea>
+    </div>
+
+
+
+    <div>
+        <div class="rows">Сюда пишите обьявление</div>
+        <textarea name="article" class="row-editor">{{article}}</textarea>
+    </div>
+</form>
+
+{% endblock %}

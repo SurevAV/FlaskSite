@@ -1,0 +1,70 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<a href={{link_return}} class="link-return">Назад</a>
+<div class="tab-view-2"></div>
+
+<div class="container-view">
+    <div class="title">{{Article.Title|safe}}</div>
+    <div class="text-view">{{Article.Article|safe}}</div>
+</div>
+
+<div class="tab-view-2"></div>
+
+<div class="container-view">
+    <div class="title">
+        <a class="text-view">Комментарии</a>
+    </div>
+</div>
+
+{% for Replys in list_Comments %}
+    <div class="tab-view-2"></div>
+    <div class="container-view">
+        <div class="container-reply">
+
+            <div class="tab-view-2"></div>
+
+
+
+            <a class="text-reply-items">Номер: </a>
+            <a id={{Replys.Id}} class="link-to" onClick="reply_click(this.id)">{{Replys.Id}}</a><br>
+            <!-- <a class="text-reply-items">IP: {{Replys.Ip}}</a><br>-->
+            <!-- <a class="text-reply-items">Номер печеньки: {{Replys.IdCookie}}</a><br>-->
+            <a class="text-reply-items">Дата: {{Replys.DateString}}</a><br>
+            <a class="text-reply-items">Кому:</a>
+            {% for to in Replys.ListTo %}
+                <a href=#{{to}} class="link-to">...{{to[31:]}}</a>
+            {% endfor %}
+            <div class="tab-view"></div>
+            <a class="text-reply">{{Replys.Reply}}</a>
+            <div class="tab-view"></div>
+            <a class="text-reply-items">Ответы:</a>
+            {% for reply in Replys.Replys %}
+                <a href=#{{reply}} class="link-to">...{{reply[31:]}}</a>
+            {% endfor %}
+
+            <div class="tab-view-2"></div>
+         </div>
+
+    </div>
+    {% endfor %}
+
+
+<div class="tab-view-2"></div>
+
+<form method="POST" action="" enctype="multipart/form-data">
+    <input id="to" name="list_to" class="list-to" maxlength="5000" placeholder="Для ответа введите список номеров комментариев через запятую или тыкните по ним мышкой">
+    <div class="tab-view-2"></div>
+    <textarea name="reply" class="row" maxlength="5000" placeholder="Оставте ваш комментарий"></textarea>
+    <div class="tab-view-2"></div>
+    <input type="submit" name="click" class="buttonpage" value="Добавить комментарий">
+</form>
+
+
+<div class="tab-view-2"></div>
+<a href={{link_return}} class="link-return">Назад</a>
+
+<script type="text/javascript" src="/static/scripts/script.js"></script>
+
+
+{% endblock %}

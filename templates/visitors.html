@@ -1,0 +1,26 @@
+{%extends "blocks.html" %}
+{%block content%}
+
+<script type="text/javascript" src="/static/scripts/script.js"></script>
+
+<a href="/" class="link-return">Назад</a>
+<a href="/editor" class="link-return">Редактор</a>
+<a href="/upload" class="link-return">Загрузка файла</a>
+<a href="/users" class="link-return">Пользователи</a>
+<hr class="line-view">
+
+<form method="GET">
+
+    <a class="users-text">От</a>
+    <input type="date" class="container-date" name="from" value="2020-10-01">
+    <a class="users-text">До</a>
+    <input type="date" class="container-date" name="to" value="2025-10-01">
+    <div class="tab-view"></div>
+    <input type="submit" name="click" class="buttonpage" value="Найти посетителей">
+    <div class="tab-view"></div>
+
+</form>
+
+
+
+{% endblock %}
